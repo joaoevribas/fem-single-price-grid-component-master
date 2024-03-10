@@ -58,7 +58,7 @@ The designs were created to the following widths:
 }
 
 body {
-  line-height: 1.5;
+  line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   min-height: 100vh;
   background: var(--clr-neutral-light-gray);
@@ -110,12 +110,13 @@ main {
   max-width: 19.4375rem;
   display: grid;
   box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem 0.5rem 0 0;
+  overflow: hidden;
 }
 
 .card__community {
   background-color: #fff;
   padding: 1.75rem 1.38rem 2rem;
-  border-radius: 0.5rem 0.5rem 0 0;
 }
 
 .card__community__title {
@@ -173,7 +174,7 @@ main {
   border-radius: 0.5rem;
   font-weight: 700;
   padding: 0.8125rem;
-  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
 }
 
 .card__subscription__btn:hover {
@@ -193,4 +194,39 @@ main {
 
 .card__why-us__list {
   font-size: 0.875rem;
+  line-height: 1.4;
+}
+
+/* Desktop */
+
+@media (min-width: 40.625rem) {
+  /* 650px */
+  .card {
+    max-width: 39.6875rem;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 0.5rem;
+  }
+
+  .card__community,
+  .card__subscription,
+  .card__why-us {
+    padding: 2rem;
+  }
+
+  .card__community {
+    grid-column: span 2;
+  }
+
+  .card__community__title {
+    font-size: 1.5rem;
+  }
+
+  .card__community__money-back {
+    font-size: 1.125rem;
+    margin-bottom: 0.6875rem;
+  }
+
+  .card__community__text {
+    font-size: 1rem;
+  }
 }
